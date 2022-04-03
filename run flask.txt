@@ -1,0 +1,48 @@
+lsof -i tcp:3000
+kill -9 PID
+
+set FLASK_APP=restaurant_webapp
+set FLASK_DEBUG=1
+set FLASK_ENV=development
+flask run --no-reload
+
+or in ubuntu
+
+export FLASK_APP=restaurant_webapp
+export FLASK_DEBUG=1
+export FLASK_ENV=development
+flask run --no-reload
+
+
+#run rasa chatbot on to take responsefrom bot at 5005
+rasa run -m models --enable-api --cors "*"
+
+#to run acitons on 5005 
+python -m rasa_sdk --actions actions
+
+#when connected to the website use
+flask run --no-reload
+
+#add migrations
+python
+from restaurant_webapp.__init__ import db, create_app
+db.create_all(app=create_app())
+
+# ngrok server
+ngrok http file:///D:\ML\rasa\chatbot\media
+
+i want to book a table for 4 under the name chinmay at 9pm today
+
+
+i want to book a table for 2 under the name kataki at 8pm tomorrow
+
+
+i want to book a table for 5 under the name sulekha at 7pm tomorrow
+
+
+
+
+
+
+
+

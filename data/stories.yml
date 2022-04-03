@@ -1,0 +1,856 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: ans_yes
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: ans_no
+  - action: utter_ok
+  
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: ask_something
+  - action: utter_ok
+  - intent: oos
+  - action: utter_oos
+  - intent: ask_something
+  - action: utter_ok
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: how_you_doing
+  - action: utter_im_good
+  - intent: ask_something
+  - action: utter_ok
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: how_you_doing
+  - action: utter_im_good
+  - action: utter_how_can_i_help_you
+  - intent: ask_something
+  - action: utter_ok
+  - intent: oos
+    entities:
+    - under_name: raju
+  - slot_was_set:
+    - under_name: raju
+  - action: utter_oos
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_something
+  - action: utter_ok
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: oos
+  - action: utter_oos
+  - intent: oos
+  - action: utter_oos
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+    entities:
+    - under_name: chinmay
+  - slot_was_set:
+    - under_name: chinmay
+  - action: utter_greet
+  - intent: whats_your_name
+  - action: utter_name
+  - intent: oos
+  - action: utter_oos
+  - intent: whats_your_name
+  - action: utter_name
+
+- story: interactive_story_1
+  steps:
+  - intent: flirt
+  - action: utter_are_you_rich
+  - intent: ans_yes
+  - action: utter_flirt_yes
+  - intent: flirt
+  - action: utter_are_you_rich
+  - intent: ans_no
+  - action: utter_flirt_no
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: 9pm
+  - slot_was_set:
+    - time: 9pm
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - time: 5 pm
+  - slot_was_set:
+    - time: 5 pm
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - time: 5 pm
+  - slot_was_set:
+    - time: 5 pm
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: suhas
+  - slot_was_set:
+    - under_name: suhas
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - time: 8pm
+  - slot_was_set:
+    - time: 8pm
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - time: 8pm
+  - slot_was_set:
+    - time: 8pm
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: rohan
+  - slot_was_set:
+    - under_name: rohan
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '6'
+  - slot_was_set:
+    - no_of_people: '6'
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: the day after tomorrow
+  - slot_was_set:
+    - day: the day after tomorrow
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: sumati
+  - slot_was_set:
+    - under_name: sumati
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '6'
+  - slot_was_set:
+    - no_of_people: '6'
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: 830pm
+  - slot_was_set:
+    - time: 830pm
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: satyajit
+  - slot_was_set:
+    - under_name: satyajit
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '5'
+  - slot_was_set:
+    - no_of_people: '5'
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: 730pm
+  - slot_was_set:
+    - time: 730pm
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: day after tomorrow
+  - slot_was_set:
+    - day: day after tomorrow
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - time: 5pm
+    - no_of_people: '3'
+    - day: tomorrow
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 5pm
+  - slot_was_set:
+    - day: tomorrow
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 5pm
+  - slot_was_set:
+    - day: tomorrow
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 5pm
+  - slot_was_set:
+    - day: tomorrow
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: neha
+  - slot_was_set:
+    - under_name: neha
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - time: 5pm
+    - no_of_people: '3'
+    - day: tomorrow
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 5pm
+  - slot_was_set:
+    - day: tomorrow
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - no_of_people: '7'
+  - slot_was_set:
+    - time: 6pm
+  - slot_was_set:
+    - day: tomorrow
+  - slot_was_set:
+    - no_of_people: '7'
+  - slot_was_set:
+    - time: 6pm
+  - slot_was_set:
+    - day: tomorrow
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: yadnesh
+  - slot_was_set:
+    - under_name: yadnesh
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - day: today
+    - time: 8pm
+    - no_of_people: '2'
+  - slot_was_set:
+    - no_of_people: '2'
+  - slot_was_set:
+    - time: 8pm
+  - slot_was_set:
+    - day: today
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - no_of_people: '2'
+  - slot_was_set:
+    - time: 8pm
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - no_of_people: '2'
+  - slot_was_set:
+    - time: 8pm
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: samir
+  - slot_was_set:
+    - under_name: samir
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - day: tomorrow
+    - time: 530pm
+    - no_of_people: '3'
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 530pm
+  - slot_was_set:
+    - day: tomorrow
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 530pm
+  - slot_was_set:
+    - day: tomorrow
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 530pm
+  - slot_was_set:
+    - day: tomorrow
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: akshay
+  - slot_was_set:
+    - under_name: akshay
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: flirt
+  - action: utter_are_you_rich
+  - intent: ans_no
+  - action: utter_flirt_no
+  - intent: ans_yes
+  - action: utter_oh
+  - action: utter_how_can_i_help_you
+  - intent: ans_no
+  - action: utter_oh
+  - action: utter_ok
+  - intent: oos
+  - action: utter_oos
+  - intent: ans_no
+  - action: utter_oh
+  - action: utter_ok
+  - intent: flirt
+  - action: utter_are_you_rich
+  - intent: ans_yes
+  - action: utter_flirt_yes
+  - intent: ans_no
+  - action: utter_oh
+  - action: utter_ok
+  - intent: ans_yes
+  - action: utter_ok
+
+- story: interactive_story_1
+  steps:
+  - intent: you_are_nice
+  - action: utter_thank_you
+  - intent: flirt
+  - action: utter_are_you_rich
+  - intent: ans_no
+  - action: utter_flirt_no
+  - intent: ans_yes
+  - action: utter_oh
+  - action: utter_how_can_i_help_you
+  - intent: ans_no
+  - action: utter_oh
+  - action: utter_ok
+  - intent: are_you_stupid
+  - action: utter_reply_stupid
+  - intent: ans_yes
+  - action: utter_yes
+  - intent: you_are_nice
+  - action: utter_thank_you
+
+
+- story: interactive_story_1
+  steps:
+  - intent: are_you_stupid
+  - action: utter_reply_stupid
+  - intent: ans_yes
+  - action: utter_yes
+  - intent: you_are_nice
+  - action: utter_thank_you
+
+- story: interactive_story_1
+  steps:
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: lol
+  - action: utter_reply_lol
+  - intent: nice_talking_to_you
+  - action: utter_thank_you
+  - intent: nice_talking_to_you
+  - action: utter_thank_you
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: lol
+  - action: utter_reply_lol
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: lol
+  - action: utter_reply_lol
+  - intent: nice_talking_to_you
+  - action: utter_thank_you
+  - intent: nice_talking_to_you
+  - action: utter_thank_you
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - under_name: chinmay
+    - no_of_people: '3'
+    - time: '7'
+    - day: 31 july
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: '7'
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - day: 31 july
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: '7'
+  - slot_was_set:
+    - day: 31 july
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: '7'
+  - slot_was_set:
+    - day: 31 july
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+
+
+
+- story: interactive_story_1
+  steps:
+  - intent: topics_to_talk
+  - action: utter_topics_to_talk
+  - intent: restaurant_reservation
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '5'
+  - slot_was_set:
+    - time: 8pm
+  - slot_was_set:
+    - time: 8pm
+  - slot_was_set:
+    - no_of_people: '5'
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: 24th April
+  - slot_was_set:
+    - day: 24th April
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+  - intent: topics_to_talk
+  - action: utter_topics_to_talk
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: lol
+  - action: utter_reply_lol
+
+
+- story: interactive_story_1
+  steps:
+  - intent: topics_to_talk
+  - action: utter_topics_to_talk
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: lol
+  - action: utter_reply_lol
+  - intent: topics_to_talk
+  - action: utter_topics_to_talk
+  - intent: restaurant_reservation
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - time: 2pm
+  - slot_was_set:
+    - time: 2pm
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: 5 January
+  - slot_was_set:
+    - day: 5 January
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_details
+  - action: utter_restaurant_details
+  - intent: working_hours
+  - action: utter_working_hours
+  - intent: working_hours
+  - action: utter_working_hours
+  - intent: working_hours
+  - action: utter_working_hours
+
+- story: interactive_story_1
+  steps:
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: lol
+  - action: utter_reply_lol
+  - intent: are_you_stupid
+  - action: utter_reply_stupid
+  - intent: ans_yes
+  - action: utter_yes
+  - intent: show_meme
+  - action: utter_show_meme
+  - intent: ans_yes
+  - action: utter_ok
+  - intent: flirt
+  - action: utter_are_you_rich
+  - intent: ans_yes
+  - action: utter_flirt_yes
+  - intent: ans_yes
+  - action: utter_oh
+  - action: utter_how_can_i_help_you
+  - intent: ans_no
+  - action: utter_oh
+  - action: utter_ok
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - under_name: chinmay
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: 9pm
+  - slot_was_set:
+    - time: 9pm
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: 23 march
+  - slot_was_set:
+    - day: 23 march
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+  - intent: thank_you
+  - action: utter_welcome
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: restaurant_reservation
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: Pratap
+  - slot_was_set:
+    - under_name: Pratap
+  - slot_was_set:
+    - requested_slot: no_of_people
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - no_of_people: '4'
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: 4:30 pm
+  - slot_was_set:
+    - time: 4:30 pm
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: friday
+  - slot_was_set:
+    - day: friday
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_reservation
+    entities:
+    - no_of_people: '3'
+  - slot_was_set:
+    - no_of_people: '3'
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - no_of_people: '3'
+  - slot_was_set:
+    - requested_slot: under_name
+  - slot_was_set:
+    - under_name: atharv
+  - slot_was_set:
+    - under_name: atharv
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '5'
+  - slot_was_set:
+    - time: '5'
+  - slot_was_set:
+    - requested_slot: day
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - day: today
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_are_you_sure_for_booking
+  - intent: ans_yes
+  - action: action_confirm_reservation

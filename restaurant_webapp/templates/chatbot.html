@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{ name }}!!!
+</h1>
+
+<div 
+  id="rasa-chat-widget" 
+  data-websocket-url="http://127.0.0.1:5005"
+  data-height="400"
+  data-width="300"
+  data-initial-payload="/greeting"
+  >
+</div>
+<script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+
+
+<!-- <script>!(function () {
+  let e = document.createElement("script"),
+  t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            initPayload: '/greeting',
+            customData: { language: "en" },
+            socketUrl: "http://localhost:5005",
+            socketPath: "/socket.io/",
+            params:{
+              storage: "session",
+            },
+            showFullScreenButton: true,
+          },        
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+</script>
+   -->
+
+
+{% endblock %}

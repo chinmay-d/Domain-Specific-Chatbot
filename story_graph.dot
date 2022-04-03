@@ -1,0 +1,24 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=booking_form];
+6 [class=active, fontsize=12, label=utter_submit];
+7 [class=active, fontsize=12, label=utter_are_you_sure_for_booking];
+8 [class=active, fontsize=12, label=action_confirm_reservation];
+9 [class="intent dashed active", label="  ?  ", shape=rect];
+10 [class="intent active", fillcolor=lightblue, label="book me a table for 3", shape=rect, style=filled];
+11 [class="intent active", fillcolor=lightblue, label=today, shape=rect, style=filled];
+12 [class="intent active", fillcolor=lightblue, label=yup, shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 10  [class=active, key=0];
+2 -> 6  [class=active, key=NONE, label=""];
+2 -> 11  [class=active, key=0];
+6 -> 7  [class=active, key=NONE, label=""];
+7 -> 12  [class=active, key=0];
+8 -> 9  [class=active, key=NONE, label=""];
+10 -> 2  [class=active, key=0];
+11 -> 2  [class=active, key=0];
+12 -> 8  [class=active, key=0];
+}

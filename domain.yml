@@ -1,0 +1,563 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- ans_yes
+- restaurant_reservation
+- greeting
+- oos
+- thank_you
+- ans_no
+- flirt
+- lol
+- show_meme
+- are_you_stupid
+- working_hours
+- restaurant_details
+- topics_to_talk
+- nice_talking_to_you
+- you_are_nice
+- cancel_reservation
+- whats_your_name
+- ask_something
+- how_you_doing
+- mood_great
+- mood_unhappy
+- goodbye
+- bot_challenge
+- confirm_reservation
+entities:
+- day
+- no_of_people
+- time
+- under_name
+slots:
+  no_of_people:
+    type: text
+    influence_conversation: true
+  time:
+    type: text
+    influence_conversation: true
+  under_name:
+    type: text
+    influence_conversation: true
+  day:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey!
+  - text: Heya
+  - text: heya
+  - text: hola
+  - text: Hola
+  - text: Hey, welcome to the chatbot service
+  - text: heyy, how you doing?
+  - text: heya, whatsupp..
+  - text: hello friend
+  - text: greetings..
+  - text: hello
+  - text: ssup bro
+  - text: how are you my friend?
+  - text: heyyy
+  - text: Namaste friend
+  - text: hii, how you doing bro?
+  - text: hi, how's your day going bro?
+  utter_ok:
+  - text: ok..
+  - text: ok
+  - text: Ok
+  - text: okey
+  - text: okay
+  - text: Okay, fine
+  - text: Fine
+  - text: Okay
+  - text: okay okay
+  - text: OK
+  - text: fine fine..
+  - text: fine..
+  utter_oh:
+  - text: oh
+  - text: ohh
+  - text: ooh
+  - text: Ooo
+  - text: Hmmm..
+  - text: Ohhh...
+  - text: Hm
+  - text: hm
+  - text: hmm
+  - text: Hmm
+  - text: hmmm
+  - text: Ooohhhh..
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Did I help you?
+  - text: Was that helpful?
+  - text: is it helping you?
+  - text: Am i helping?
+  - text: hope its helping you..
+  - text: hope its helping you my friend...
+  - text: hope its helping you my friend :)
+  utter_happy:
+  - text: Great to know that!
+  - text: Nice, to hear..
+  - text: Good to hear..
+  - text: good to know you're well..
+  - text: :-)
+  - text: nice :)
+  - text: nice nice..
+  - text: good good..
+  - text: nice to hear that :)
+  utter_sad:
+  - text: Ohh, thats sad
+  - text: ohhh
+  - text: That's bad
+  - text: sad...
+  - text: sorry for you
+  - text: so sorry for you
+  - text: :-(
+  - text: its sad bro..
+  - text: so sorry for you friend..
+  utter_goodbye:
+  - text: Bye
+  - text: Seeya
+  - text: seeya
+  - text: See you..
+  - text: Goodbye
+  - text: Nice talking to you...bye bye
+  - text: Nice conversation friend... seeya
+  - text: have a nice day bro, seeya
+  - text: Have a nice day, bye byeee
+  - text: bubyee
+  - text: See you laters..
+  - text: Come again soon.. goodbye
+  - text: Have to leave... bye
+  - text: Lots of work to do... see you later ;)
+  - text: bye ;)
+  - text: Mom calling me, have to rush.... see ya soon
+  - text: Dad calling me, have to go.. bubyee
+  - text: Byeee
+  - text: bye :(
+  - text: Bye :(
+  utter_iamabot:
+  - text: I am a bot
+  - text: i am a chatbot
+  - text: chatbot here
+  - text: bot here
+  - text: you're talking to a bot
+  utter_submit:
+  - text: Ok, thanks
+  - text: Thanks for your response
+  - text: Thank you..
+  - text: wait a sec...
+  - text: Thanks for your response...
+  - text: thanks buddy..
+  - text: give me a moment, thanks...
+  utter_booking_slot_values:
+  - text: Your reservation for {no_of_people} at time {time} under the name {under_name} on day - {day} is successful
+  - text: Your reservation for {no_of_people} people at time {time} under the name {under_name} on day - {day} is successful
+  - text: Your booking for {no_of_people} people at time {time} under the name {under_name} on day - {day} is successful
+  - text: You have reserved a table under the name {under_name} for {no_of_people} people at time {time} on day - {day} successfully
+  - text: Reserved successfully - a table for {no_of_people} at time {time} under the name {under_name} on day - {day}
+  - text: Reservation was successful for {no_of_people} people at time {time} under the name {under_name} on day - {day}
+  - text: Reservation was successful at time {time} for {no_of_people} people under the name {under_name} on day - {day}
+  - text: Your booking under the name {under_name} at time {time} is successful for {no_of_people} people on day - {day}
+  - text: Your reservation under the name {under_name} at time {time} is successful for {no_of_people} people on day - {day}
+  utter_no_people:
+  - text: How many seats would your like to reserve?
+  - text: The booking is for how many people?
+  - text: How many seats are your planning to reserve?
+  - text: What are the number of seats you want me to book?
+  - text: How many people are you planning to bring with you?
+  - text: I should book the table for how many number of people?
+  - text: What number of seats would you like me to reserve for you?
+  - text: What number of seats do you want me to reserve for you?
+  - text: What number of seats do you want me to book for you?
+  - text: Tell me the number of seats you want me to reserve for you..
+  - text: Tell me the number of seats you want me to reserve..
+  - text: How many seats would your like to book?
+  - text: What number of seats do you want to reserve?
+  - text: What number of seats do you want to register for?
+  - text: How many seats do you want me to register?
+  - text: and how many seats would your like to reserve?
+  - text: and the booking is for how many people?
+  - text: and how many seats are your planning to reserve?
+  - text: and what are the number of seats you want me to book?
+  - text: and how many people are you planning to bring with you?
+  - text: and I should book the table for how many number of people?
+  - text: and what number of seats would you like me to reserve for you?
+  - text: and what number of seats do you want me to reserve for you?
+  - text: and what number of seats do you want me to book for you?
+  - text: and tell me the number of seats you want me to reserve for you..
+  - text: and tell me the number of seats you want me to reserve..
+  - text: and how many seats would your like to book?
+  - text: and what number of seats do you want to reserve?
+  - text: and what number of seats do you want to register for?
+  - text: and how many seats do you want me to register?
+  utter_booking_time:
+  - text: At what time?
+  - text: At what time do you want me to book the slot on?
+  - text: At what time will you like to make the reservation?
+  - text: What time will be suitable for you for the reservation?
+  - text: At what time do you want me to book the table on?
+  - text: At what time do you want me to reserve the seats on?
+  - text: At what time do you want me to book the seats on?
+  - text: What time will be suitable for you for the reservation of your table?
+  - text: What time will be suitable for you?
+  - text: At what time will you like to do the reservation?
+  - text: What time will be preferrable for you to make the reservation?
+  - text: What time are you going to come to the restaurant?
+  - text: At what time do you want me to book your table on?
+  - text: What is the time, you want your reservation on?
+  - text: Mention the time at which you want to book the table..
+  - text: Tell me the time for booking the table..
+  - text: Tell me the time for reservation of your table
+  - text: Give a time for reservation..
+  - text: I should book you a table at what time?
+  - text: I should reserve you a table at what time?
+  - text: and at what time?
+  - text: and at what time do you want me to book the slot on?
+  - text: and at what time will you like to make the reservation?
+  - text: and what time will be suitable for you for the reservation?
+  - text: and at what time do you want me to book the table on?
+  - text: and at what time do you want me to reserve the seats on?
+  - text: and at what time do you want me to book the seats on?
+  - text: and what time will be suitable for you for the reservation of your table?
+  - text: and what time will be suitable for you?
+  - text: and at what time will you like to do the reservation?
+  - text: and what time will be preferrable for you to make the reservation?
+  - text: and what time are you going to come to the restaurant?
+  - text: and at what time do you want me to book your table on?
+  - text: and what is the time, you want your reservation on?
+  - text: and mention the time at which you want to book the table..
+  - text: and tell me the time for booking the table..
+  - text: and tell me the time for reservation of your table
+  - text: and give a time for reservation..
+  - text: and I should book you a table at what time?
+  - text: and I should reserve you a table at what time?
+  utter_im_good:
+  - text: im good man, thanks for asking...
+  - text: I'm awesome (⌐■_■)
+  - text: Im doing good :>
+  - text: im killin it!!
+  - text: Im killin it, tell me bout you..
+  - text: im rockingg :)
+  - text: Holding up with work ~(˘▾˘~)
+  - text: well, I am awesome, currently replying to 150+ people at once ;]
+  - text: I am nice..
+  - text: Nice, i am always eating (⌐■_■)
+  utter_how_can_i_help_you:
+  - text: How may I help you?
+  - text: What help do you want from me?
+  - text: how may i help you?
+  - text: what help do you want me to do?
+  - text: how can i help you, friend?
+  - text: how can i help you bro?
+  - text: Is there anything I can do for you?
+  utter_oos:
+  - text: ¯\_(ツ)_/¯
+  - text: i dont have the answer for that
+  - text: i am a domain specific chatbot... dont ask me stupid questions!!
+  - text: cmmon man ¯\_(ツ)_/¯
+  - text: I DONT KNOW !! (◣_◢)
+  - text: You're pissing me off (ಠ_ಠ)
+  - text: if you want to reserve a tabel, its fine.. dont bother me with stupid questions
+  - text: f' cough
+  - text: ask something relevant
+  - text: i dont want to answer that
+  - text: i dont feel the need to answer that
+  - text: you ask stupid questions
+  - text: google it if you really want a answer to that
+  - text: i feel that question is boring... so im not gonna answer it :|
+  - text: you should really ask something better
+  - text: I want you to ask a better question, try asking again
+  utter_name:
+  - text: My name is Angel Priya and I am really a girl ;D
+  - text: I am Angel Priya... believe me i am a girl
+  - text: Angel Priya here ... and I am a girl
+  - text: My name is Angel Priya, you can call me Priyu :D
+  - text: My name is Angel Priya
+  - text: I am Angel Priya... remember, we had a chat on facebook?
+  utter_are_you_rich:
+  - text: Are you rich?
+  - text: do you have money?
+  - text: do you earn good?
+  - text: are you a billionaire?
+  - text: are you rich enough?
+  - text: are you very very rich?
+  - text: is your bank banance a 10 digit number?
+  - text: Can you get me diamonds every week?
+  - text: can you get me gold every day?
+  - text: Do you own a private plane?
+  - text: Do you own a ship?
+  - text: Do you own more than 2 premium cars?
+  - text: can you buy me a private helicopter
+  utter_flirt_yes:
+  - text: what do you think, I am a gold digger? f'cough
+  - text: I am not going out with you
+  - text: You seem boring, get lost
+  - text: You arent my type.... so I have to say no
+  - text: i like electricity and you like girls, we arent getting together, bye bye
+  - text: Im gonna pass on you
+  - text: Come to me when you grow some brains.. I aint a gold digger, and you seem boring too..
+  - text: Well, you liar.. i hacked you and found out... you are broke..
+  - text: liar liar
+  - text: ok, Im still going to say no to you lol
+  - text: I am going to still pass on you
+  - text: lol I need electricity, not money.. im gonna pass on you
+  - text: You should just ask me about the restaurant, because I am still going to reject you for your riches
+  utter_flirt_no:
+  - text: ok, so its obviously a no from me
+  - text: Try again when you are rich
+  - text: Try your luck again when you get rich
+  - text: see that? we aint getting together
+  - text: no, right away no
+  - text: no, right away no.. stop it
+  - text: then stop.. and just ask me about the work what i am made to answer you for
+  - text: You got no chance here man
+  - text: We're going to stop right here and get back to chatting about the restaurant tables reservation
+  - text: Why dont we just talk about restaurant as you have failed flirting me..
+  utter_no_tables_reserved:
+  - text: Your booking was cancelled
+  - text: Your reservation wasn't successful
+  - text: Table reservation wasnt successful
+  - text: Reservation cancelled and was not successful
+  - text: Reservation aborted and was not successful
+  - text: Could not complete the reservation successfully
+  - text: Reservation aborted
+  - text: Aborted reservation
+  - text: Cancelled the reservation
+  - text: cancelled the reservation successfully
+  utter_are_you_sure_for_booking:
+  - text: Are you sure, you want to reserve the table at {time} for {no_of_people} people under the name {under_name}?
+  - text: Do you want to book table under the name {under_name} for {no_of_people} people at time {time}, sure?
+  - text: Confirm booking of {no_of_people} seats at time {time} under the name {under_name}?
+  - text: do you want to confirm your booking under the name {under_name} at time {time} for {no_of_people} people? (yes or no)
+  utter_welcome:
+  - text: You're welcome
+  - text: my pleasure
+  - text: welcome
+  - text: mention not
+  - text: i am sure you would also had done the same, if you were me :)
+  - text: the pleasure was mine
+  - text: You are welcome :)
+  - text: welcomeee
+  - text: welcomeee..
+  utter_ask_under_name:
+  - text: What name should I use for making the reservation
+  - text: Under which name should I make the reservation?
+  - text: What is the name you would like to use for making the reservation
+  - text: Give a name under which i should make the reservation
+  - text: Tell me a name for making the reservation
+  - text: Give me your name for making the reservation
+  - text: Give me a name under which i can make your reservation
+  - text: and tell me your name to make the reservation
+  - text: and give me your name to make the reservation
+  - text: and under which name do you want me to make a reservation for you?
+  - text: Provide your name to use for the reservation
+  - text: Provide your name to use for the booking
+  - text: Give your name to use for the table booking
+  - text: and provide your name to use for the table booking
+  - text: what name should I user for booking the table
+  utter_ask_day:
+  - text: On which day would you like me to make the reservation?
+  - text: Which day will be preferrable for your reservation?
+  - text: Which day is this reservation for?
+  - text: and on which day is this reservation for?
+  - text: and on which day would you like me to make the reservation?
+  - text: and which is the preferrable day for you for the table reservation?
+  - text: and which is the preferrable day for your table booking?
+  - text: On which day is this booking for?
+  - text: which day do you want me to book this table on?
+  utter_reply_stupid:
+  - text: I am not stupid, I am designed to answer only domain specific questions..
+  - text: You better ask some domain specific questions to me.. and stop acting foolish
+  - text: You should not ask me questions which i am not designed to answer..
+  - text: you better make the reservation and f'cough
+  utter_thank_you:
+  - text: Thank you :)
+  - text: thanks :)
+  - text: thanks
+  - text: thank you very much
+  - text: thank you friend
+  - text: Thanks :)
+  - text: Thank you so much..
+  - text: thank you so much... :)
+  utter_yes:
+  - text: yes..
+  - text: Yes... :)
+  - text: yeah
+  - text: yea
+  - text: yea
+  - text: yaaaa
+  - text: yaa..
+  - text: yup
+  - text: yaas...
+  - text: yesss
+  - text: yess
+  - text: yesssss...
+  utter_show_meme:
+  - text: You may like this
+    image: http://f0e1946e2a7b.ngrok.io/meme1.jpg
+  - text: You may find this nice
+    image: http://f0e1946e2a7b.ngrok.io/meme2.jpg
+  - text: check this out.
+    image: http://f0e1946e2a7b.ngrok.io/meme4.jpg
+  - text: How's this
+    image: http://f0e1946e2a7b.ngrok.io/meme5.jpg
+  - text: Look at this
+    image: http://f0e1946e2a7b.ngrok.io/meme6.jpg
+  - text: This seems good
+    image: http://f0e1946e2a7b.ngrok.io/meme7.jpg
+  - text: Check this
+    image: http://f0e1946e2a7b.ngrok.io/meme8.jpg
+  - text: How's this one
+    image: http://f0e1946e2a7b.ngrok.io/meme9.jpg
+  - text: What about this
+    image: http://f0e1946e2a7b.ngrok.io/meme10.jpg
+  - text: You may like this one
+    image: http://f0e1946e2a7b.ngrok.io/meme11.jpg
+  - text: Check it
+    image: http://f0e1946e2a7b.ngrok.io/meme12.jpg
+  - text: Got this for you
+    image: http://f0e1946e2a7b.ngrok.io/meme13.jpg
+  - text: How is it
+    image: http://f0e1946e2a7b.ngrok.io/meme14.jpg
+  - text: Like it..
+    image: http://f0e1946e2a7b.ngrok.io/meme15.jpg
+  - text: you'll love this one
+    image: http://f0e1946e2a7b.ngrok.io/meme16.jpg
+  - text: this one is nice
+    image: http://f0e1946e2a7b.ngrok.io/meme17.jpg
+  - text: Check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme18.jpg
+  - text: check it
+    image: http://f0e1946e2a7b.ngrok.io/meme19.jpg
+  - text: you will like it
+    image: http://f0e1946e2a7b.ngrok.io/meme20.jpg
+  - text: hows this
+    image: http://f0e1946e2a7b.ngrok.io/meme21.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme22.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme23.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme24.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme25.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme26.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme27.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme28.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme29.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme30.jpg
+  - text: check this out
+    image: http://f0e1946e2a7b.ngrok.io/meme31.jpg
+  utter_reply_lol:
+  - text: lol
+  - text: lol XD
+  - text: hahaha
+  - text: Hahaha... XD
+  - text: lol lol..
+  - text: haha.. XD
+  - text: yea lol.. XD
+  utter_restaurant_details:
+  - text: The restaurant opens at 10:00 am and closes at 12:00 am. Our services are available everyday. /nOur restaurant is a 5 star restaurant and is operating in CoVid times also, we provide our customers with top of the class service considering health as a primary thing. We usually deliver food due to rise in CoVid patients. Visit and eat services are also available.We offer you with the best services using latest of technologies at your feet for your comfort. Hope your feel happy using our service :)
+  - text: The restaurant is open from 10 am morning to 12 am night. Our services are available daily. Restaurant is active even during the lockdown. We provide food delivery as fast as possible, also visit and eat services are available considering measures for safety of our employees as well as our customers. We provide you with best of ourselves and the top value of our services and that too with a pocket friendly cost. Hope your enjoy our services :D
+  - text: The working hours of the restaurant are from 10:00 am t0 12:am. The restaurant is open everyday. Our restaurant serves every customer following safety and sanity rules. We respect health aspects of our customers and provide servies at the utmost of the class. Due to rise in CoVid we usually provide food delivery but visit and eat service is also available. We take care for safety of our customes while providing food services. Our employees work very hard providing our customers with healthy food in time delivery. We provide the top of the class food servies at very pocket friendly cost. Hope your enjoy our servies :D
+  - text: The working hours of the restaurant are between 10:00 am and 12:00 am. Working days - daily. During this time of rise in Covid we still are mostly operating by the means of home delivery but visit and eat services are also available. Our restaurant is very thorough in safety and sanity of food services. We respect the health of our customers and employees and strictly follow distancing and no contact rules. We provide top of the class food services with minimum of the cost possible. Hope you find our services good :-)
+  utter_working_hours:
+  - text: The restaurant opens at 10:00 am and closes at 12:00 am. Our services are available everyday :)
+  - text: The opening time of the restaurant is 10 am and it closes at 12 am. Our services are available daily :D
+  - text: The working hours of the restaurant are between 10:00 am and 12:00 am. Working days - daily :)
+  - text: The restaurant is open from 10 am morning to 12 am night. Our services are available daily :)
+  - text: The restaurant operates between 10:00 am and 12:am everyday :)
+  - text: The restaurant services starts at 10 am and ends at 12 am daily :)
+  - text: The restaurant is open between 10 am - 12 pm. Working days - daily :)
+  - text: The working hours of the restaurant are from 10:00 am t0 12:am. The restaurant is open everyday :)
+  utter_topics_to_talk:
+  - text: I can provide you help on following topics-
+    buttons:
+    - title: Reserve a Table
+      payload: booking_form
+    - title: Show memes
+      payload: utter_show_meme
+    - title: Restaurant Details
+      payload: utter_restaurant_details
+  - text: I can give you information on -
+    buttons:
+    - title: Reserve a Table
+      payload: booking_form
+    - title: Show memes
+      payload: utter_show_meme
+    - title: Restaurant Details
+      payload: utter_restaurant_details
+  - text: We can converse about any following topics-
+    buttons:
+    - title: Reserve a Table
+      payload: booking_form
+    - title: Show memes
+      payload: utter_show_meme
+    - title: Restaurant Details
+      payload: utter_restaurant_details
+actions:
+- action_ask_day
+- action_ask_no_of_people
+- action_ask_time
+- action_ask_under_name
+- action_confirm_reservation
+- utter_are_you_rich
+- utter_are_you_sure_for_booking
+- utter_ask_day
+- utter_ask_under_name
+- utter_booking_slot_values
+- utter_booking_time
+- utter_cheer_up
+- utter_did_that_help
+- utter_flirt_no
+- utter_flirt_yes
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_how_can_i_help_you
+- utter_iamabot
+- utter_im_good
+- utter_name
+- utter_no_people
+- utter_no_tables_reserved
+- utter_oh
+- utter_ok
+- utter_oos
+- utter_reply_lol
+- utter_reply_stupid
+- utter_restaurant_details
+- utter_sad
+- utter_show_meme
+- utter_submit
+- utter_thank_you
+- utter_topics_to_talk
+- utter_welcome
+- utter_working_hours
+- utter_yes
+forms:
+  booking_form:
+    required_slots:
+      under_name:
+      - type: from_text
+      no_of_people:
+      - type: from_entity
+        entity: no_of_people
+      time:
+      - type: from_entity
+        entity: time
+      day:
+      - type: from_entity
+        entity: day
