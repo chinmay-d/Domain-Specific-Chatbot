@@ -8,7 +8,17 @@ This project is about a Domain Specific Chatbot for booking restaurant reservati
 
 ## Interface and conversations with chatbot
 
-### Normal conversation
+### 1. Normal conversation
 <p float="left">
-    <img src="images/chatbot01.png" width="320"/>
+    <img src="images/chatbot01.png" width="250"/>
 </p>
+
+### 1. Normal conversation
+<div style="display: flex; justify-content: space-between;">
+<p float="left">
+    <img src="images/chatbot02.png" width="250"/>
+</p>
+<p float="right">
+    <img src="images/chatbot03.png" width="250"/>
+</p>
+</div>
