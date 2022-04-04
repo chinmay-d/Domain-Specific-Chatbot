@@ -20,3 +20,14 @@ This project is about a Domain Specific Chatbot for booking restaurant reservati
 <p float="right">
     <img src="images/chatbot03.png" width="250"/>
 </p>
+
+### 3. Make reservation
+<p float="left">
+    <img src="images/chatbot_conv1.png" width="640"/>
+</p>
+<p float="right">
+    <img src="images/chatbot_conv2.png" width="640"/>
+</p>
+<p float="right">
+    <img src="images/chatbot_conv3.png" width="640"/>
+</p>
