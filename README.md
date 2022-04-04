@@ -13,12 +13,10 @@ This project is about a Domain Specific Chatbot for booking restaurant reservati
     <img src="images/chatbot01.png" width="250"/>
 </p>
 
-### 1. Show memes
-<div style="display: flex; justify-content: space-between;">
-<p style="margin:0;display:inline;float:left">
+### 2. Show memes
+<p float="left">
     <img src="images/chatbot02.png" width="250"/>
 </p>
-<p style="margin:0;display:inline;float:left">
+<p float="right">
     <img src="images/chatbot03.png" width="250"/>
 </p>
-</div>
