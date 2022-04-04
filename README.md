@@ -48,7 +48,7 @@ host meme folder like this:
 ```sh
 ngrok http file://< PATH TO MEMES FOLDER >
 ```
-change the image path to ngrok's hosted path in domain.yml
+change the image path to ngrok's hosted path in `domain.yml`
 
 ### 3. Run rasa server
 ```sh
