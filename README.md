@@ -10,5 +10,5 @@ This project is about a Domain Specific Chatbot for booking restaurant reservati
 
 ### Normal conversation
 <p float="left">
-    <img src="images/chatbot01.png"/>
+    <img src="images/chatbot01.png" width="320"/>
 </p>
