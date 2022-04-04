@@ -136,7 +136,7 @@ class confirmReservation(Action):
             det = json.loads(r.text)
             res_id = det["reservation_id"]
 
-            # dispatcher.utter_message(text="Your reservation ID is: {}" .format(res_id))
+            dispatcher.utter_message(text="Your reservation ID is: {}" .format(res_id))
             # row_template = '''
             # <html>
             #     <body>

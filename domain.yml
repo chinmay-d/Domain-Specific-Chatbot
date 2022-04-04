@@ -402,65 +402,65 @@ responses:
   - text: yesssss...
   utter_show_meme:
   - text: You may like this
-    image: http://f0e1946e2a7b.ngrok.io/meme1.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme1.jpg
   - text: You may find this nice
-    image: http://f0e1946e2a7b.ngrok.io/meme2.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme2.jpg
   - text: check this out.
-    image: http://f0e1946e2a7b.ngrok.io/meme4.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme4.jpg
   - text: How's this
-    image: http://f0e1946e2a7b.ngrok.io/meme5.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme5.jpg
   - text: Look at this
-    image: http://f0e1946e2a7b.ngrok.io/meme6.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme6.jpg
   - text: This seems good
-    image: http://f0e1946e2a7b.ngrok.io/meme7.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme7.jpg
   - text: Check this
-    image: http://f0e1946e2a7b.ngrok.io/meme8.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme8.jpg
   - text: How's this one
-    image: http://f0e1946e2a7b.ngrok.io/meme9.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme9.jpg
   - text: What about this
-    image: http://f0e1946e2a7b.ngrok.io/meme10.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme10.jpg
   - text: You may like this one
-    image: http://f0e1946e2a7b.ngrok.io/meme11.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme11.jpg
   - text: Check it
-    image: http://f0e1946e2a7b.ngrok.io/meme12.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme12.jpg
   - text: Got this for you
-    image: http://f0e1946e2a7b.ngrok.io/meme13.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme13.jpg
   - text: How is it
-    image: http://f0e1946e2a7b.ngrok.io/meme14.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme14.jpg
   - text: Like it..
-    image: http://f0e1946e2a7b.ngrok.io/meme15.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme15.jpg
   - text: you'll love this one
-    image: http://f0e1946e2a7b.ngrok.io/meme16.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme16.jpg
   - text: this one is nice
-    image: http://f0e1946e2a7b.ngrok.io/meme17.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme17.jpg
   - text: Check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme18.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme18.jpg
   - text: check it
-    image: http://f0e1946e2a7b.ngrok.io/meme19.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme19.jpg
   - text: you will like it
-    image: http://f0e1946e2a7b.ngrok.io/meme20.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme20.jpg
   - text: hows this
-    image: http://f0e1946e2a7b.ngrok.io/meme21.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme21.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme22.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme22.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme23.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme23.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme24.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme24.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme25.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme25.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme26.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme26.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme27.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme27.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme28.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme28.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme29.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme29.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme30.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme30.jpg
   - text: check this out
-    image: http://f0e1946e2a7b.ngrok.io/meme31.jpg
+    image: http://9826-103-139-4-177.ngrok.io/meme31.jpg
   utter_reply_lol:
   - text: lol
   - text: lol XD
