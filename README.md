@@ -43,8 +43,8 @@ pip install -r requirements.txt
 **NOTE:**  You can skip the below step if you dont want to show memes
 
 ### 2. Setting up a ngrok tunnel to host memes
-Download and set [ngrok](https://ngrok.com/download)
-host meme folder like this:
+Download and set [ngrok](https://ngrok.com/download).
+Host meme folder like this:
 ```sh
 ngrok http file://< PATH TO MEMES FOLDER >
 ```
@@ -69,5 +69,5 @@ export FLASK_ENV=development
 flask run --no-reloads
 ```
 
-## Licence
+## License
 This project is totally free to use, although credit would be appreciated in case of any reuse of the work.
