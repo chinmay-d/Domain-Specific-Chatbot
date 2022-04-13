@@ -1,5 +1,7 @@
 restaurant_webapp/db.sqlite3
 models
 media
-data
+data/data.json
+data/nlu.yml
+data/stories.yml
 .env
